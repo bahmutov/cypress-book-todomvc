@@ -7,6 +7,7 @@ This application starts with an input field.
 ![Initial screen](images/initial.png)
 
 <details style="display:none">
+<summary>Initial view</summary>
 <!-- fiddle Initial -->
 
 ```js
@@ -119,5 +120,7 @@ The tests should run. These tests are above in this file, hiding inside an invis
 <!-- fiddle-end -->
 </details>
 ```
+
+This is similar to what I have done in [Self-testing JAM pages](https://www.cypress.io/blog/2019/11/13/self-testing-jam-pages/)
 
 The test usually includes several [.screenshot](https://on.cypress.io/screenshot) commands, these images are moved into [images](images) folder using code in the [cypress/plugins/index.js](cypress/plugins/index.js) file.
