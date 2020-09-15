@@ -5,9 +5,8 @@
   "description": "Cypress tests inside README that update the screenshots",
   "scripts": {
     "cypress:open": "cypress open",
-    "dev": "run-p --race start:ci cypress:open",
+    "dev": "start-test 8888 cypress:open",
     "start": "http-server -p 8888 -c-1",
-    "start:ci": "http-server -p 8888 -c-1 --silent",
     "test": "cypress run"
   },
   "dependencies": {
@@ -18,6 +17,8 @@
     "todomvc-common": "cypress-io/todomvc-common#88b7c6359ad4a5097312d8b2a21dd539ce9f4446"
   },
   "devDependencies": {
+    "@cypress/fiddle": "1.18.2",
+    "@types/node": "14.10.1",
     "cypress": "5.1.0",
     "start-server-and-test": "1.11.3"
   }
