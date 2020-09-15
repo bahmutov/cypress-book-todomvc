@@ -7,7 +7,7 @@ This application starts with an input field.
 ![Initial screen](images/initial.png)
 
 <details style="display:none">
-<!-- fiddle Initial  -->
+<!-- fiddle Initial -->
 
 ```js
 cy.visit('/')
@@ -24,7 +24,7 @@ User can enter several todos, and they are added to the list
 ![Added three todos](images/todos.png)
 
 <details style="display:none">
-<!-- fiddle Adding todos  -->
+<!-- fiddle Adding todos -->
 
 ```js
 cy.visit('/')
@@ -57,7 +57,7 @@ Only a single active todo remains
 ![Single remaining todo](images/remaining-todo.png)
 
 <details style="display:none">
-<!-- fiddle.only Completing tasks  -->
+<!-- fiddle Completing tasks -->
 
 ```js
 cy.visit('/')
@@ -98,3 +98,26 @@ cy.screenshot('remaining-todo')
 </details>
 
 ## Explanation
+
+This README file contains tests Cypress understands and runs by using [cypress-fiddle](https://github.com/cypress-io/cypress-fiddle) file preprocessor. Start the application and Cypress using
+
+```
+npm install
+npm run dev
+```
+
+And click on the `README.md` file
+
+![README spec](images/readme.png)
+
+The tests should run. These tests are above in this file, hiding inside an invisible HTML element and a comment:
+
+```
+<details style="display:none">
+<!-- fiddle Initial -->
+... Cypress test ...
+<!-- fiddle-end -->
+</details>
+```
+
+The test usually includes several [.screenshot](https://on.cypress.io/screenshot) commands, these images are moved into [images](images) folder using code in the [cypress/plugins/index.js](cypress/plugins/index.js) file.
