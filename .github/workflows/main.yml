@@ -2,7 +2,8 @@ name: main
 on:
   push:
     branches:
-      - main
+      # branch name depends on the action below
+      - master
 jobs:
   cypress-run:
     runs-on: ubuntu-latest

@@ -125,5 +125,5 @@ The test usually includes several [.screenshot](https://on.cypress.io/screenshot
 
 This project is built and tested using [GitHub Actions](https://glebbahmutov.com/blog/trying-github-actions/). If there are any changed screenshots, they are automatically committed and pushed to GH, see [.github/workflows/main.yml](.github/workflows/main.yml)
 
-[ci image]: https://github.com/bahmutov/cypress-book-todomvc/workflows/main/badge.svg?branch=main
+[ci image]: https://github.com/bahmutov/cypress-book-todomvc/workflows/main/badge.svg?branch=master
 [ci url]: https://github.com/bahmutov/cypress-book-todomvc/actions
