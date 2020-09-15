@@ -15,3 +15,10 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: npm start
+      # now let's see any changed files
+      - run: git status
+      # and commit and push them back to GH if any
+      # https://github.com/mikeal/publish-to-github-action
+      - uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
