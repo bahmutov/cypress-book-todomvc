@@ -1,4 +1,5 @@
 # cypress-book-todomvc
+
 [![ci status][ci image]][ci url]
 
 ### Initial screen
@@ -16,6 +17,7 @@ cy.visit('/')
 cy.get('input').should('be.visible')
 cy.screenshot('initial')
 ```
+
 <!-- fiddle-end -->
 </details>
 
@@ -37,6 +39,7 @@ cy.get('.new-todo')
 cy.get('.todo-list li').should('have.length', 3)
 cy.screenshot('todos')
 ```
+
 <!-- fiddle-end -->
 </details>
 
@@ -44,9 +47,13 @@ cy.screenshot('todos')
 
 Once there are several todo items, the user can mark some items "done" and then clear them using a button.
 
-![Completed items](images/completed-todos.png)
+![Completed several items](images/completed-todos.png)
 
-The "Clear completed" button is at the button and becomes visible only if there are completed items.
+You can see just the completed items using the filters below the list
+
+![Just completed items](images/just-completed-todos.png)
+
+The "Clear completed" button is at the bottom and becomes visible only if there are completed items.
 
 ![Footer](images/footer.png)
 
@@ -74,13 +81,19 @@ cy.contains('.view', 'test in Cypress').find('.toggle').click()
 cy.get('.todo-list li.completed').should('have.length', 2)
 cy.screenshot('completed-todos')
 
+cy.contains('.filters li', 'Completed').click()
+cy.get('.todo-list li').should('have.length', 2)
+cy.screenshot('just-completed-todos')
+
+cy.contains('.filters li', 'All').click()
 cy.get('footer.footer').screenshot('footer')
-cy.contains('Clear completed').should('be.visible')
-  .then($el => {
+cy.contains('Clear completed')
+  .should('be.visible')
+  .then(($el) => {
     $el.css({
       textDecoration: 'underline',
       border: '1px solid pink',
-      borderRadius: '2px'
+      borderRadius: '2px',
     })
   })
 cy.get('footer.footer').screenshot('clear-completed')
@@ -91,6 +104,7 @@ cy.contains('Clear completed').click()
 cy.get('.todo-list li').should('have.length', 1)
 cy.screenshot('remaining-todo')
 ```
+
 <!-- fiddle-end -->
 </details>
 
