@@ -1,4 +1,4 @@
-# cypress-book-todomvc
+# cypress-book-todomvc [![ci status][ci image]][ci url]
 
 ### Initial screen
 
@@ -124,3 +124,6 @@ The tests should run. These tests are above in this file, hiding inside an invis
 This is similar to what I have done in [Self-testing JAM pages](https://www.cypress.io/blog/2019/11/13/self-testing-jam-pages/)
 
 The test usually includes several [.screenshot](https://on.cypress.io/screenshot) commands, these images are moved into [images](images) folder using code in the [cypress/plugins/index.js](cypress/plugins/index.js) file.
+
+[ci image]: https://github.com/bahmutov/cypress-book-todomvc/workflows/main/badge.svg?branch=main
+[ci url]: https://github.com/bahmutov/cypress-book-todomvc/actions
