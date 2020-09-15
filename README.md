@@ -1,4 +1,5 @@
-# cypress-book-todomvc [![ci status][ci image]][ci url]
+# cypress-book-todomvc
+[![ci status][ci image]][ci url]
 
 ### Initial screen
 
@@ -82,16 +83,11 @@ cy.contains('Clear completed').should('be.visible')
       borderRadius: '2px'
     })
   })
-cy.get('footer.footer').screenshot('clear-completed').click()
+cy.get('footer.footer').screenshot('clear-completed')
 
-cy.contains('Clear completed').should('be.visible')
-  .then($el => {
-    $el.css({
-      textDecoration: 'none',
-      border: 'none',
-      borderRadius: 'none'
-    })
-  })
+// clear completed items and take a screenshot
+// of the single active todo
+cy.contains('Clear completed').click()
 cy.get('.todo-list li').should('have.length', 1)
 cy.screenshot('remaining-todo')
 ```
