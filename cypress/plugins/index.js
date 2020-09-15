@@ -16,6 +16,15 @@ module.exports = (on, config) => {
   on('after:screenshot', (details) => {
     console.log(details) // print all details to terminal
 
+    // here is a good change to modify the image:
+    // add watermarks, text. Maybe even upload the image
+    // to an external host rather than keep it in the repo
+
+    // we could also only copy images on CI or for
+    // each OS platform separately
+
+    // we should probably NOT copy screenshots on failures
+
     const newPath = path.join(imagesFolder, details.name + '.png')
 
     return new Promise((resolve, reject) => {
