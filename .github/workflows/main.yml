@@ -38,6 +38,8 @@ jobs:
       - run: git status
       # and commit and push them back to GH if any
       # https://github.com/mikeal/publish-to-github-action
+      # unfortunately for now this action only pushes to "master" branch
+      # https://github.com/mikeal/publish-to-github-action/issues/6
       - uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
