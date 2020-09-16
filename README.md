@@ -2,7 +2,7 @@
 
 [![ci status][ci image]][ci url]
 
-### Initial screen
+## Initial screen
 
 This application starts with an input field.
 
@@ -21,7 +21,7 @@ cy.screenshot('initial')
 <!-- fiddle-end -->
 </details>
 
-### Main feature
+## Main feature
 
 User can enter several todos, and they are added to the list
 
@@ -43,7 +43,7 @@ cy.screenshot('todos')
 <!-- fiddle-end -->
 </details>
 
-### Completing tasks
+## Completing tasks
 
 Once there are several todo items, the user can mark some items "done" and then clear them using a button.
 
@@ -137,7 +137,7 @@ The test usually includes several [.screenshot](https://on.cypress.io/screenshot
 
 For more advanced use case where you might want to generate video clips from tests, see [cypress-movie](http://github.com/bahmutov/cypress-movie)
 
-## on CI
+### on CI
 
 This project is built and tested using [GitHub Actions](https://glebbahmutov.com/blog/trying-github-actions/). If there are any changed screenshots, they are automatically committed and pushed to GH, see [.github/workflows/main.yml](.github/workflows/main.yml)
 
