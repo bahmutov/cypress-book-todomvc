@@ -6,7 +6,7 @@
 
 This application starts with an input field.
 
-![Initial screen](images/initial.png)
+![Initial screen](./images/initial.png)
 
 <details style="display:none">
 <summary>Initial view</summary>
@@ -25,7 +25,7 @@ cy.screenshot('initial')
 
 User can enter several todos, and they are added to the list
 
-![Added three todos](images/todos.png)
+![Added three todos](./images/todos.png)
 
 <details style="display:none">
 <!-- fiddle Adding todos -->
@@ -47,23 +47,23 @@ cy.screenshot('todos')
 
 Once there are several todo items, the user can mark some items "done" and then clear them using a button.
 
-![Completed several items](images/completed-todos.png)
+![Completed several items](./images/completed-todos.png)
 
 You can see just the completed items using the filters below the list
 
-![Just completed items](images/just-completed-todos.png)
+![Just completed items](./images/just-completed-todos.png)
 
 The "Clear completed" button is at the bottom and becomes visible only if there are completed items.
 
-![Footer](images/footer.png)
+![Footer](./images/footer.png)
 
 Hover over the button and click on it
 
-![Clear completed button](images/clear-completed.png)
+![Clear completed button](./images/clear-completed.png)
 
 Only a single active todo remains
 
-![Single remaining todo](images/remaining-todo.png)
+![Single remaining todo](./images/remaining-todo.png)
 
 <details style="display:none">
 <!-- fiddle Completing tasks -->
@@ -119,7 +119,7 @@ npm run dev
 
 And click on the `README.md` file
 
-![README spec](images/readme.png)
+![README spec](./images/readme.png)
 
 The tests should run. These tests are above in this file, hiding inside an invisible HTML element and a comment:
 
