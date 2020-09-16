@@ -141,5 +141,7 @@ For more advanced use case where you might want to generate video clips from tes
 
 This project is built and tested using [GitHub Actions](https://glebbahmutov.com/blog/trying-github-actions/). If there are any changed screenshots, they are automatically committed and pushed to GH, see [.github/workflows/main.yml](.github/workflows/main.yml)
 
+Then this README is converted into a static site using [VuePress](https://vuepress.vuejs.org/) and deployed to the GitHub Pages at [https://glebbahmutov.com/cypress-book-todomvc/](https://glebbahmutov.com/cypress-book-todomvc/).
+
 [ci image]: https://github.com/bahmutov/cypress-book-todomvc/workflows/main/badge.svg?branch=master
 [ci url]: https://github.com/bahmutov/cypress-book-todomvc/actions
