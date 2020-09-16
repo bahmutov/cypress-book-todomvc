@@ -135,6 +135,24 @@ This is similar to what I have done in [Self-testing JAM pages](https://www.cypr
 
 The test usually includes several [.screenshot](https://on.cypress.io/screenshot) commands, these images are moved into [images](images) folder using code in the [cypress/plugins/index.js](cypress/plugins/index.js) file.
 
+You can also take a screenshot with the test runner to show how Cypress looks during the test.
+
+![TodoMVC test inside Cypress](./images/demo-test.png)
+
+<details style="display:none">
+<summary>TodoMVC test</summary>
+<!-- fiddle TodoMVC test -->
+
+```js
+cy.visit('/')
+cy.get('.new-todo').type('I ❤️ tests{enter}')
+cy.get('.todo-list li').should('have.length', 1)
+cy.screenshot('demo-test', { capture: 'runner', log: false })
+```
+
+<!-- fiddle-end -->
+</details>
+
 For more advanced use case where you might want to generate video clips from tests, see [cypress-movie](http://github.com/bahmutov/cypress-movie)
 
 ### on CI

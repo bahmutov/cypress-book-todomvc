@@ -31,7 +31,9 @@ module.exports = (on, config) => {
     // each OS platform separately
     // for example, we might want to copy the image
     // on the user's machine the first time, but not replace an
-    // existing screenshot
+    // existing screenshot. If you do want to replace the
+    // screenshot locally - delete the file from
+    // the "images" folder and run the test
     if (fs.existsSync(newPath)) {
       if (!isCI) {
         console.log('skipping overwriting existing image %s', newPath)
