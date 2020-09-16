@@ -135,6 +135,8 @@ This is similar to what I have done in [Self-testing JAM pages](https://www.cypr
 
 The test usually includes several [.screenshot](https://on.cypress.io/screenshot) commands, these images are moved into [images](images) folder using code in the [cypress/plugins/index.js](cypress/plugins/index.js) file.
 
+For more advanced use case where you might want to generate video clips from tests, see [cypress-movie](http://github.com/bahmutov/cypress-movie)
+
 ## on CI
 
 This project is built and tested using [GitHub Actions](https://glebbahmutov.com/blog/trying-github-actions/). If there are any changed screenshots, they are automatically committed and pushed to GH, see [.github/workflows/main.yml](.github/workflows/main.yml)
