@@ -8,11 +8,12 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout 🛎
         uses: actions/checkout@v1
+
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
-      - name: Cypress run
+      - name: Cypress run 🧪
         uses: cypress-io/github-action@v2
         with:
           start: npm start
@@ -24,11 +25,25 @@ jobs:
           path: cypress/videos
 
       # now let's see any changed files
-      - run: git status
+      - name: See changed files 👀
+        run: git status
+
       # and commit and push them back to GH if any
       # https://github.com/mikeal/publish-to-github-action
       # unfortunately for now this action only pushes to "master" branch
       # https://github.com/mikeal/publish-to-github-action/issues/6
-      - uses: mikeal/publish-to-github-action@master
+      - name: Commit changed files 🆙
+        uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build site 🏗
+        run: npm run build
+
+      # push static site, but only from the default branch
+      - name: Publish site 🌐
+        if: github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./.vuepress/dist
