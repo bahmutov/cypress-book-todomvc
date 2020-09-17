@@ -19,7 +19,15 @@ module.exports = (on, config) => {
   // https://on.cypress.io/after-screenshot-api
   on('after:screenshot', (details) => {
     console.log(details) // print all details to terminal
-    // TODO we should probably NOT copy screenshots on failures
+
+    if (details.testFailure) {
+      // skip screenshots taken on failure
+      return
+    }
+    if (!details.name) {
+      console.error('Cannot copy screenshot - it is missing a name!')
+      return
+    }
 
     const newPath = path.join(imagesFolder, details.name + '.png')
 
