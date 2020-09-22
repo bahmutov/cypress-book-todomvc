@@ -1,6 +1,6 @@
 {
   "fixturesFolder": false,
   "integrationFolder": ".",
-  "testFiles": "README.md",
+  "testFiles": "*.md",
   "baseUrl": "http://localhost:8888"
 }
