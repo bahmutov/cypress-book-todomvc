@@ -14,3 +14,7 @@ cy.screenshot('social-image')
 ```
 
 <!-- fiddle-end -->
+
+The result image is 1280x640 pixels
+
+![Social image](./images/social-image.png)

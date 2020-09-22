@@ -161,5 +161,7 @@ This project is built and tested using [GitHub Actions](https://glebbahmutov.com
 
 Then this README is converted into a static site using [VuePress](https://vuepress.vuejs.org/) and deployed to the GitHub Pages at [https://glebbahmutov.com/cypress-book-todomvc/](https://glebbahmutov.com/cypress-book-todomvc/).
 
+See also [social image test](./social-image.md)
+
 [ci image]: https://github.com/bahmutov/cypress-book-todomvc/workflows/main/badge.svg?branch=master
 [ci url]: https://github.com/bahmutov/cypress-book-todomvc/actions
