@@ -1,0 +1,20 @@
+name: pull
+on: pull_request
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v1
+
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
+      - name: Cypress run 🧪
+        uses: cypress-io/github-action@v2
+        env:
+          DEBUG: cypress-book-todomvc
+        with:
+          start: npm start
+
+      - name: Build site 🏗
+        run: npm run build
