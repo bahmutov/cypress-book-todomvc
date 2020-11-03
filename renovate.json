@@ -1,0 +1,34 @@
+{
+  "extends": [
+    "config:base"
+  ],
+  "automerge": true,
+  "major": {
+    "automerge": false
+  },
+  "prConcurrentLimit": 3,
+  "prHourlyLimit": 2,
+  "schedule": [
+    "after 10pm and before 5am on every weekday",
+    "every weekend"
+  ],
+  "masterIssue": true,
+  "labels": [
+    "type: dependencies",
+    "renovate"
+  ],
+  "packageRules": [
+    {
+      "packagePatterns": [
+        "*"
+      ],
+      "excludePackagePatterns": [
+        "cypress",
+        "vuepress",
+        "debug",
+        "@cypress/fiddle"
+      ],
+      "enabled": false
+    }
+  ]
+}

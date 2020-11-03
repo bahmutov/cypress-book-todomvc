@@ -1,6 +1,6 @@
 # cypress-book-todomvc
 
-[![ci status][ci image]][ci url]
+[![ci status][ci image]][ci url] [![renovate-app badge][renovate-badge]][renovate-app]
 
 > Repo [bahmutov/cypress-book-todomvc](https://github.com/bahmutov/cypress-book-todomvc), read the blog post [Cypress Book](https://glebbahmutov.com/blog/cypress-book/).
 
@@ -177,3 +177,5 @@ DEBUG=cypress-book-todomvc
 
 [ci image]: https://github.com/bahmutov/cypress-book-todomvc/workflows/main/badge.svg?branch=master
 [ci url]: https://github.com/bahmutov/cypress-book-todomvc/actions
+[renovate-badge]: https://img.shields.io/badge/renovate-app-blue.svg
+[renovate-app]: https://renovateapp.com/
