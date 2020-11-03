@@ -34,10 +34,12 @@ User can enter several todos, and they are added to the list
 
 ```js
 cy.visit('/')
+cy.log('**entering 3 todos 📝**')
 cy.get('.new-todo')
-  .type('write in Markdown{enter}')
-  .type('code in JavaScript{enter}')
-  .type('test in Cypress{enter}')
+  .type('write in Markdown ⌨️{enter}')
+  .type('code in JavaScript 💻{enter}')
+  .type('test in Cypress 😻{enter}')
+cy.log('**assertion ✅**')
 cy.get('.todo-list li').should('have.length', 3)
 cy.screenshot('todos')
 ```
@@ -147,8 +149,10 @@ You can also take a screenshot with the test runner to show how Cypress looks du
 
 ```js
 cy.visit('/')
-cy.get('.new-todo').type('I ❤️ tests{enter}')
-cy.get('.todo-list li').should('have.length', 1)
+cy.log('**entering 2 todos 📝**')
+cy.get('.new-todo').type('I ❤️ tests{enter}').type('and 💕 tests{enter}')
+cy.log('**assertion ✅**')
+cy.get('.todo-list li').should('have.length', 2)
 cy.screenshot('demo-test', { capture: 'runner', log: false })
 ```
 
