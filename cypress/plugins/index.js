@@ -48,29 +48,38 @@ module.exports = (on, config) => {
         console.log('skipping overwriting existing image %s', targetImagePath)
         return
       }
-    }
 
-    const capturedImageSize = fs.statSync(details.path).size
-    const targetImageSize = fs.statSync(targetImagePath).size
-    const tolerance = 0.001 // 0.1% percent in byte size
-    const byteDifferenceRatio =
-      Math.abs(capturedImageSize - targetImageSize) / targetImageSize
+      debug('checking image sizes before overwriting')
+      const capturedImageSize = fs.statSync(details.path).size
+      const targetImageSize = fs.statSync(targetImagePath).size
+      const tolerance = 0.001 // 0.1% percent in byte size
+      const byteDifferenceRatio =
+        Math.abs(capturedImageSize - targetImageSize) / targetImageSize
 
-    debug('captured image byte size %d at %s', capturedImageSize, details.path)
-    debug('existing image byte size %d at %s', targetImageSize, targetImagePath)
-    debug(
-      'byte difference ratio %d tolerance %d',
-      byteDifferenceRatio,
-      tolerance,
-    )
-
-    if (byteDifferenceRatio < tolerance) {
-      console.log(
-        'new image size is within %d%% of the existing image in byte size',
-        tolerance * 100,
+      debug(
+        'captured image byte size %d at %s',
+        capturedImageSize,
+        details.path,
       )
-      console.log('skipping overwriting existing image %s', targetImagePath)
-      return
+      debug(
+        'existing image byte size %d at %s',
+        targetImageSize,
+        targetImagePath,
+      )
+      debug(
+        'byte difference ratio %d tolerance %d',
+        byteDifferenceRatio,
+        tolerance,
+      )
+
+      if (byteDifferenceRatio < tolerance) {
+        console.log(
+          'new image size is within %d%% of the existing image in byte size',
+          tolerance * 100,
+        )
+        console.log('skipping overwriting existing image %s', targetImagePath)
+        return
+      }
     }
 
     return new Promise((resolve, reject) => {

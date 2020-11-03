@@ -9,7 +9,8 @@
     "start": "http-server -p 8888 -c-1",
     "test": "cypress run",
     "press": "vuepress dev",
-    "build": "vuepress build"
+    "build": "vuepress build",
+    "ci": "start-test 8888"
   },
   "dependencies": {
     "director": "1.2.8",
