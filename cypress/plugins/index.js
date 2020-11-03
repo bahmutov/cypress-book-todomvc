@@ -57,7 +57,7 @@ module.exports = (on, config) => {
       Math.abs(capturedImageSize - targetImageSize) / targetImageSize
 
     debug('captured image byte size %d at %s', capturedImageSize, details.path)
-    debug('existing image byte size %d at %s', targetImagePath, targetImageSize)
+    debug('existing image byte size %d at %s', targetImageSize, targetImagePath)
     debug(
       'byte difference ratio %d tolerance %d',
       byteDifferenceRatio,
