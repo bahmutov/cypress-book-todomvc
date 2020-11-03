@@ -11,6 +11,9 @@ jobs:
       - name: Checkout 🛎
         uses: actions/checkout@v1
 
+      - name: Add emoji font 🤩
+        run: apt-get update && apt-get install -y font-noto-emoji
+
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run 🧪
