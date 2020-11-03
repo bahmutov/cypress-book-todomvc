@@ -145,7 +145,7 @@ You can also take a screenshot with the test runner to show how Cypress looks du
 
 <details style="display:none">
 <summary>TodoMVC test</summary>
-<!-- fiddle TodoMVC test -->
+<!-- fiddle TodoMVC test 🤯 -->
 
 ```js
 cy.visit('/')
