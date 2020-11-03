@@ -21,7 +21,7 @@
     "todomvc-common": "cypress-io/todomvc-common#88b7c6359ad4a5097312d8b2a21dd539ce9f4446"
   },
   "devDependencies": {
-    "@cypress/fiddle": "1.18.2",
+    "@cypress/fiddle": "1.18.3",
     "@types/node": "14.10.1",
     "cypress": "5.5.0",
     "debug": "4.2.0",
