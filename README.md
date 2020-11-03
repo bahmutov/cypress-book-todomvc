@@ -2,6 +2,8 @@
 
 [![ci status][ci image]][ci url]
 
+> Repo [bahmutov/cypress-book-todomvc](https://github.com/bahmutov/cypress-book-todomvc), read the blog post [Cypress Book](https://glebbahmutov.com/blog/cypress-book/).
+
 ## Initial screen
 
 This application starts with an input field.
