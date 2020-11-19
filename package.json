@@ -24,7 +24,7 @@
     "@cypress/fiddle": "1.19.0",
     "@types/node": "14.10.1",
     "cypress": "5.6.0",
-    "debug": "4.2.0",
+    "debug": "4.3.1",
     "prettier": "2.1.1",
     "start-server-and-test": "1.11.3",
     "vuepress": "1.5.4"
