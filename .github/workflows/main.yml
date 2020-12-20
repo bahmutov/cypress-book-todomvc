@@ -20,7 +20,7 @@ jobs:
       - name: Cypress run 🧪
         uses: cypress-io/github-action@v2
         env:
-          DEBUG: cypress-book-todomvc
+          DEBUG: cypress-book
         with:
           start: npm start
 
