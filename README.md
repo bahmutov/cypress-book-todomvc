@@ -2,7 +2,7 @@
 
 [![ci status][ci image]][ci url] [![renovate-app badge][renovate-badge]][renovate-app]
 
-> Repo [bahmutov/cypress-book-todomvc](https://github.com/bahmutov/cypress-book-todomvc), read the blog post [Cypress Book](https://glebbahmutov.com/blog/cypress-book/).
+> Repo [bahmutov/cypress-book-todomvc](https://github.com/bahmutov/cypress-book-todomvc), read the blog post [Cypress Book](https://glebbahmutov.com/blog/cypress-book/). Uses [cypress-book](https://github.com/bahmutov/cypress-book) module to copy the screenshots.
 
 ## Initial screen
 
