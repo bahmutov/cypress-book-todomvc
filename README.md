@@ -176,7 +176,7 @@ See also [social image test](./social-image.md)
 To see verbose messages from this project run with the environment variable
 
 ```
-DEBUG=cypress-book-todomvc
+DEBUG=cypress-book
 ```
 
 [ci image]: https://github.com/bahmutov/cypress-book-todomvc/workflows/main/badge.svg?branch=master
