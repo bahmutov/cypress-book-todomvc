@@ -1,7 +1,7 @@
 // @ts-check
 const fs = require('fs')
 const path = require('path')
-const mdPreprocessor = require('@cypress/fiddle/src/markdown-preprocessor')
+const mdPreprocessor = require('cypress-markdown-preprocessor')
 const debug = require('debug')('cypress-book-todomvc')
 
 // we probably want to copy "canonical" images when
