@@ -28,6 +28,6 @@
     "debug": "4.3.4",
     "prettier": "2.1.1",
     "start-server-and-test": "1.11.3",
-    "vuepress": "1.8.2"
+    "vuepress": "1.9.7"
   }
 }
